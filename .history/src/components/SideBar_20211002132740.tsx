@@ -1,19 +1,17 @@
+import { useState } from "react";
 import { Button } from "./Button";
 
-import '../styles/content.scss';
-
-interface SideBarProps {
-  genres: Array<{
-    id: number;
-    name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-    title: string;
-  }>
-  selectedGenreId: number;
-  setSelectedGenreId: (id: number) => void;
+interface GenreResponseProps {
+  id: number;
+  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
+  title: string;
 }
 
-export function SideBar({genres, selectedGenreId, setSelectedGenreId} : SideBarProps) {
+export function SideBar() {
   // Complete aqui
+  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
+  const [selectedGenreId, setSelectedGenreId] = useState(1);
+
   function handleClickButton(id: number) {
     setSelectedGenreId(id);
   }

@@ -3,8 +3,6 @@ import { Icon } from './Icon';
 import '../styles/button.scss';
 import { ButtonHTMLAttributes } from 'react';
 
-import '../styles/sidebar.scss';
-
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
   iconName: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';

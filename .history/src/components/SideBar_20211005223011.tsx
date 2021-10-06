@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 
-import '../styles/content.scss';
+import './styles/content.scss';
 
 interface SideBarProps {
   genres: Array<{
